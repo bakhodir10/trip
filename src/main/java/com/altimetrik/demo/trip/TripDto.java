@@ -1,21 +1,19 @@
 package com.altimetrik.demo.trip;
 
-import com.altimetrik.demo.city.City;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.altimetrik.demo.airport.Airport;
+import com.altimetrik.demo.car.Car;
+import com.altimetrik.demo.hotel.Hotel;
+import lombok.*;
 
-import java.util.Date;
-
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 public class TripDto {
-    private City origination;
-    private City destination;
-    private Date startDate;
-    private Date duration;
-    private ComfortOptions comfortOptions;
+
+    private double price = 0;
+    private Airport airport;
+    private Hotel hotel;
+    private Car car;
 }
